@@ -1,12 +1,11 @@
 // Copyright 2022 NNTU-CS
-#include "tree.h"
-
 #include <cstdint>
 #include <chrono>
 #include <fstream>
 #include <iostream>
 #include <random>
 #include <vector>
+#include "tree.h"
 
 static int64_t factorial(int n) {
   int64_t res = 1;
