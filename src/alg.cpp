@@ -1,6 +1,4 @@
 // Copyright 2022 NNTU-CS
-#include "tree.h"
-
 #include <cstdint>
 #include <algorithm>
 #include <functional>
@@ -8,6 +6,7 @@
 #include <numeric>
 #include <utility>
 #include <vector>
+#include "tree.h"
 
 static int64_t factorial(int n) {
   static std::vector<int64_t> fact{1};
