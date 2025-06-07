@@ -7,19 +7,20 @@
 #include <stdexcept>
 
 class PMTree {
-public:
-    struct Node {
-        char value;
-        std::vector<std::unique_ptr<Node>> children;
-        Node(char v) : value(v) {}
-    };
+ public:
+  struct Node {
+    char value;
+    std::vector<std::unique_ptr<Node>> children;
+    explicit Node(char v) : value(v) {}
+  };
 
-    std::unique_ptr<Node> root;
+  std::unique_ptr<Node> root;
 
-    PMTree(const std::vector<char>& elements);
+  explicit PMTree(const std::vector<char>& elements);
 
-private:
-    void build(std::unique_ptr<Node>& node, std::vector<char> remaining);
+ private:
+  void build(std::unique_ptr<Node>& node,
+             std::vector<char> remaining);
 };
 
 std::vector<std::vector<char>> getAllPerms(const PMTree& tree);
